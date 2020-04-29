@@ -6,26 +6,28 @@
                 <span class="font-semibold text-xl text-black tracking-tight">Michael Brooks Developments</span>
             </div>
             <div class="block lg:hidden">
-                <button class="flex items-center px-3 py-2 border rounded text-black border-teal-400 hover:text-black hover:border-white">
+                <button v-on:click="isHidden = !isHidden" class="flex items-center px-3 py-2 border rounded text-black border-teal-400 hover:text-black hover:border-white">
                     <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
                 </button>
             </div>
-            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-                <div class="text-sm lg:flex-grow text-right">
-                    <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">
-                        Work
-                    </a>
-                    <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 test-black hover:text-white mr-4">
-                        About
-                    </a>
-                    <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 test-black hover:text-white mr-4">
-                        Testimonials
-                    </a>
-                    <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white">
-                        Contact
-                    </a>
+            <transition name="fade">
+                <div v-if="!isHidden" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                    <div class="text-sm lg:flex-grow text-right">
+                        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">
+                            Work
+                        </a>
+                        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 test-black hover:text-white mr-4">
+                            About
+                        </a>
+                        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 test-black hover:text-white mr-4">
+                            Testimonials
+                        </a>
+                        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4 lg:mr-0">
+                            Contact
+                        </a>
+                    </div>
                 </div>
-            </div>
+            </transition>
         </nav>
 
         <div id="hero-image-1" class="md:flex text-center">
@@ -171,5 +173,34 @@
 </template>
 
 <script>
+    export default {
+        data() {
+            return {
+                windowWidth: 0,
+                mdBreakpoint: 768,
+                isHidden: true,
+            }
+        },
+        computed: {
+            menuVisible() {
+                return this.windowWidth > this.mdBreakpoint ? true : this.isHidden
 
+            }
+        },
+        methods: {
+            updateWindowSize() {
+                this.windowWidth = window.innerWidth
+            },
+            clickMenu() {
+                this.isHidden = !this.isHidden
+            }
+        },
+        mounted() {
+            this.updateWindowSize()
+            window.addEventListener('resize', this.updateWindowSize)
+        },
+        beforeDestroyed() {
+            window.removeEventListener('resize', this.updateWindowSize)
+        }
+    }
 </script>

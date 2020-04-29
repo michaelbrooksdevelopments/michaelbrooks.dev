@@ -73,3 +73,22 @@
     border-bottom-width: 5px;
     border-bottom-color: #fff;
 }
+
+@keyframes grow {
+    from { height: 0; }
+    to { height: 148px; }
+}
+
+@keyframes shrink {
+    from { height: 148px; }
+    to { height: 0; }
+}
+
+.fade-enter, .fade-enter-active /* .fade-leave-active below version 2.1.8 */ {
+    animation-name: grow;
+    animation-duration: .5s;
+}
+.fade-leave-to, .fade-leave-active {
+    animation-name: shrink;
+    animation-duration: .5s;
+}
