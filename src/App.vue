@@ -2,7 +2,7 @@
     <div id="app">
         <nav class="flex w-full items-center fixed justify-between flex-wrap bg-white p-6 border-b">
             <div class="flex items-center flex-shrink-0 text-white mr-6">
-                <img class="fill-current h-8 w-8 mr-2" width="54" height="54" src="./assets/images/robot_medium.png"/>
+                <img class="fill-current h-8 w-8 mr-2" src="./assets/images/robot_small.png"/>
                 <span class="font-semibold text-xl text-black tracking-tight">Michael Brooks Developments</span>
             </div>
             <div class="block lg:hidden">
@@ -46,8 +46,7 @@
         </div>
         <div class="md:flex mt-16 text-center ">
             <div class="pt-20 pb-1 m-auto inline">
-                <p class="text-l uppercase mt-5 mb-4">I focus on one thing</p>
-                <h1 class="text-3xl px-2 font-bold">Making your website work for you</h1>
+                <p class="text-l uppercase mt-5 mb-4">Take a look at my clients</p>
             </div>
         </div>
         <div class="md:flex text-center  pb-32 mt-4">
