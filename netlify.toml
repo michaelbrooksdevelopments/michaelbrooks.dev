@@ -1,0 +1,9 @@
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+	cache-control = '''
+	max-age=604800'''
+  for = "/*.css"
+    [headers.values]
+  	cache-control = '''
+  	max-age=604800'''
