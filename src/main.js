@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueScrollTo from 'vue-scrollto'
 import App from './App.vue'
-import '@/assets/css/tailwind.css'
+import '@/assets/css/styles.css'
 
 
 Vue.config.productionTip = false
