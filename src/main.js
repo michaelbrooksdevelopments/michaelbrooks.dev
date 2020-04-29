@@ -2,9 +2,11 @@ import Vue from 'vue'
 import VueScrollTo from 'vue-scrollto'
 import App from './App.vue'
 import '@/assets/css/styles.css'
-
+import VueClazyLoad from 'vue-clazy-load';
 
 Vue.config.productionTip = false
+
+Vue.use(VueClazyLoad);
 
 Vue.use(VueScrollTo,  {
   container: "body",

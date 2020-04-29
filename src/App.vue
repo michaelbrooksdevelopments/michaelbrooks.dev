@@ -55,7 +55,15 @@
             </div>
             <div class="md:flex w-1/1">
                 <div class="md:w-1/4 mr-6 mb-6 px-6">
-                    <img src="./assets/images/brooks.png" alt="">
+                    <clazy-load src="./assets/images/brooks.png">
+                        <!-- The image slot renders after the image loads. -->
+                        <img src="./assets/images/brooks.png">
+                        <!-- The placeholder slot displays while the image is loading. -->
+                        <div slot="placeholder">
+                            <!-- You can put any component you want in here. -->
+                            Loading....
+                        </div>
+                    </clazy-load>
                     <p class="mt-4 text-2xl">Brooks Pet Sitters</p>
                     <p class="text-gray-600">
                         I helped my wife start her own business, and created her website with functional design and SEO
@@ -63,7 +71,15 @@
                     </p>
                 </div>
                 <div class="md:w-1/4 mr-12 mb-6 px-6">
-                    <img src="./assets/images/logo-new-black.jpg" alt="">
+                    <clazy-load src="./assets/images/logo-new-black.jpg">
+                        <!-- The image slot renders after the image loads. -->
+                        <img src="./assets/images/logo-new-black.jpg">
+                        <!-- The placeholder slot displays while the image is loading. -->
+                        <div slot="placeholder">
+                            <!-- You can put any component you want in here. -->
+                            Loading....
+                        </div>
+                    </clazy-load>
                     <p class="mt-4 text-2xl">My Haulfryn</p>
                     <p class="text-gray-600">
                         Built entirely with Laravel, this website enabled holiday and residential homeowners the ability
@@ -74,7 +90,15 @@
                     </p>
                 </div>
                 <div class="md:w-1/4 px-6">
-                    <img src="./assets/images/pulse8communications.jpg" alt="">
+                    <clazy-load src="./assets/images/pulse8communications.jpg">
+                        <!-- The image slot renders after the image loads. -->
+                        <img src="./assets/images/pulse8communications.jpg">
+                        <!-- The placeholder slot displays while the image is loading. -->
+                        <div slot="placeholder">
+                            <!-- You can put any component you want in here. -->
+                            Loading....
+                        </div>
+                    </clazy-load>
                     <p class="mt-4 text-2xl">Pulse8 Communications</p>
                     <p class="text-gray-600">
                         Customers can view broadband plans and sign up to their chosen plan. Pulse8 Broadband can then
@@ -87,7 +111,15 @@
         <div class="md:flex md:py-32 w-full m-auto bg-black">
             <div class="md:w-1/5"></div>
             <div class="w-full md:w-1/3">
-                <img src="https://michaelbrooks.dev/wp-content/uploads/2019/03/img1.jpg" alt="">
+                <clazy-load src="https://michaelbrooks.dev/wp-content/uploads/2019/03/img1.jpg">
+                    <!-- The image slot renders after the image loads. -->
+                    <img src="https://michaelbrooks.dev/wp-content/uploads/2019/03/img1.jpg">
+                    <!-- The placeholder slot displays while the image is loading. -->
+                    <div slot="placeholder">
+                        <!-- You can put any component you want in here. -->
+                        Loading....
+                    </div>
+                </clazy-load>
             </div>
             <div class="w-full mt-6 md:w-1/4 text-center md:text-left">
                 <p class="text-white text-5xl">About Me</p>

@@ -10,6 +10,7 @@
   "dependencies": {
     "core-js": "^2.6.11",
     "vue": "^2.6.11",
+    "vue-clazy-load": "^0.4.2",
     "vue-scrollto": "^2.18.1"
   },
   "devDependencies": {
