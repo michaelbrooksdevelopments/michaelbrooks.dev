@@ -2,7 +2,7 @@
     <div id="app">
         <nav class="flex w-full items-center fixed justify-between flex-wrap bg-white p-6 border-b">
             <div class="flex items-center flex-shrink-0 text-white mr-6">
-                <img class="fill-current h-8 w-8 mr-2" src="./assets/images/robot_small.png"/>
+                <img class="fill-current h-8 w-8 mr-2" width="54" height="54" src="./assets/images/robot_small.png"/>
                 <span class="font-semibold text-xl text-black tracking-tight">Michael Brooks Developments</span>
             </div>
             <div class="block lg:hidden">
@@ -55,7 +55,7 @@
             </div>
             <div class="md:flex w-1/1">
                 <div class="md:w-1/4 mr-6 mb-6 px-6">
-                    <img src="https://michaelbrooks.dev/wp-content/uploads/2019/03/brooks.png" alt="">
+                    <img src="./assets/images/brooks.png" alt="">
                     <p class="mt-4 text-2xl">Brooks Pet Sitters</p>
                     <p class="text-gray-600">
                         I helped my wife start her own business, and created her website with functional design and SEO
@@ -63,7 +63,7 @@
                     </p>
                 </div>
                 <div class="md:w-1/4 mr-12 mb-6 px-6">
-                    <img src="https://michaelbrooks.dev/wp-content/uploads/2019/03/logo-new-black.jpg" alt="">
+                    <img src="./assets/images/logo-new-black.jpg" alt="">
                     <p class="mt-4 text-2xl">My Haulfryn</p>
                     <p class="text-gray-600">
                         Built entirely with Laravel, this website enabled holiday and residential homeowners the ability
@@ -74,7 +74,7 @@
                     </p>
                 </div>
                 <div class="md:w-1/4 px-6">
-                    <img src="https://michaelbrooks.dev/wp-content/uploads/2019/03/pulse8communications.jpg" alt="">
+                    <img src="./assets/images/pulse8communications.jpg" alt="">
                     <p class="mt-4 text-2xl">Pulse8 Communications</p>
                     <p class="text-gray-600">
                         Customers can view broadband plans and sign up to their chosen plan. Pulse8 Broadband can then
