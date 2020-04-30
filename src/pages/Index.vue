@@ -98,7 +98,7 @@
         <div class="md:flex md:py-32 w-full m-auto bg-black">
             <div class="md:w-1/5"></div>
             <div class="w-full md:w-1/3">
-                <img src="https://michaelbrooks.dev/wp-content/uploads/2019/03/img1.jpg">
+                <g-image src="~/assets/images/books.jpg"/>
             </div>
             <div class="w-full mt-6 md:w-1/4 text-center md:text-left">
                 <p class="text-white text-5xl">About Me</p>
