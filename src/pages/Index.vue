@@ -4,7 +4,9 @@
             <div class="flex items-center flex-shrink-0 text-white mr-6">
                 <g-image class="fill-current h-8 w-8 mr-2" width="54" height="54"
                          src="~/assets/images/robot_small.png"/>
-                <span class="font-semibold text-xl text-black tracking-tight">Michael Brooks Developments</span>
+                <a href="#" v-scroll-to="'#home'">
+                    <span class="font-semibold text-xl text-black tracking-tight">Michael Brooks Developments</span>
+                </a>
             </div>
             <div class="block lg:hidden">
                 <button v-on:click="isHidden = !isHidden"
@@ -18,19 +20,19 @@
             <transition name="fade">
                 <div v-if="!isHidden" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
                     <div class="text-sm lg:flex-grow text-right">
-                        <a href="#responsive-header"
+                        <a href="#" v-scroll-to="'#contact'"
                            class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">
                             Work
                         </a>
-                        <a href="#responsive-header"
+                        <a href="#" v-scroll-to="'#contact'"
                            class="block mt-4 lg:inline-block lg:mt-0 test-black hover:text-white mr-4">
                             About
                         </a>
-                        <a href="#responsive-header"
+                        <a href="#" v-scroll-to="'#contact'"
                            class="block mt-4 lg:inline-block lg:mt-0 test-black hover:text-white mr-4">
                             Testimonials
                         </a>
-                        <a href="#responsive-header"
+                        <a href="#" v-scroll-to="'#contact'"
                            class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4 lg:mr-0">
                             Contact
                         </a>
@@ -39,7 +41,7 @@
             </transition>
         </nav>
 
-        <div id="hero-image-1" class="md:flex text-center">
+        <div id="home" class="md:flex text-center">
             <div class="py-64 px-65 w-full m-auto background-overlay">
                 <p class="text-white text-l uppercase mt-5">Good Afternoon, I am</p>
                 <h1 class="text-white text-5xl">Michael Brooks Developments LTD</h1>
@@ -137,7 +139,7 @@
                             <font-awesome :icon="['fab','linkedin']" class="text-white ml-5 text-5xl" size="3x" fixed-width />
                         </a>
                         <a href="https://github.com/Michael-Brooks" title="GitHub">
-                            <font-awesome :icon="['fab','github']" class="text-white ml-5 mt-5 md:mt-0 text-5xl" size="3x" fixed-width/>
+                            <font-awesome :icon="['fab','github']" class="text-white ml-5 text-5xl" size="3x" fixed-width/>
                         </a>
                     </div>
                 </div>
