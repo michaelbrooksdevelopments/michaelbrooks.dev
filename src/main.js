@@ -1,27 +1,9 @@
-import Vue from 'vue'
-import VueScrollTo from 'vue-scrollto'
-import App from './App.vue'
-import '@/assets/css/styles.css'
-import VueClazyLoad from 'vue-clazy-load';
+// This is the main.js file. Import global CSS and scripts here.
+// The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
-Vue.config.productionTip = false
+import DefaultLayout from '~/layouts/Default.vue'
 
-Vue.use(VueClazyLoad);
-
-Vue.use(VueScrollTo,  {
-  container: "body",
-  duration: 800,
-  easing: "ease",
-  offset: 0,
-  force: true,
-  cancelable: true,
-  onStart: false,
-  onDone: false,
-  onCancel: false,
-  x: false,
-  y: true
-})
-
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+export default function (Vue, { router, head, isClient }) {
+  // Set default layout as a global component
+  Vue.component('Layout', DefaultLayout)
+}
