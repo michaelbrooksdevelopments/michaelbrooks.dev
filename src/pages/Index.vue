@@ -2,27 +2,36 @@
     <div id="app">
         <nav class="flex w-full items-center fixed justify-between flex-wrap bg-white p-6 border-b">
             <div class="flex items-center flex-shrink-0 text-white mr-6">
-                <img class="fill-current h-8 w-8 mr-2" width="54" height="54" src="./assets/images/robot_small.png"/>
+                <g-image class="fill-current h-8 w-8 mr-2" width="54" height="54"
+                         src="~/assets/images/robot_small.png"/>
                 <span class="font-semibold text-xl text-black tracking-tight">Michael Brooks Developments</span>
             </div>
             <div class="block lg:hidden">
-                <button v-on:click="isHidden = !isHidden" class="flex items-center px-3 py-2 border rounded text-black border-teal-400 hover:text-black hover:border-white">
-                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+                <button v-on:click="isHidden = !isHidden"
+                        class="flex items-center px-3 py-2 border rounded text-black border-teal-400 hover:text-black hover:border-white">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>
+                        Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                    </svg>
                 </button>
             </div>
             <transition name="fade">
                 <div v-if="!isHidden" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
                     <div class="text-sm lg:flex-grow text-right">
-                        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">
+                        <a href="#responsive-header"
+                           class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">
                             Work
                         </a>
-                        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 test-black hover:text-white mr-4">
+                        <a href="#responsive-header"
+                           class="block mt-4 lg:inline-block lg:mt-0 test-black hover:text-white mr-4">
                             About
                         </a>
-                        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 test-black hover:text-white mr-4">
+                        <a href="#responsive-header"
+                           class="block mt-4 lg:inline-block lg:mt-0 test-black hover:text-white mr-4">
                             Testimonials
                         </a>
-                        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4 lg:mr-0">
+                        <a href="#responsive-header"
+                           class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4 lg:mr-0">
                             Contact
                         </a>
                     </div>
@@ -57,15 +66,7 @@
             </div>
             <div class="md:flex w-1/1">
                 <div class="md:w-1/4 mr-6 mb-6 px-6">
-                    <clazy-load src="./assets/images/brooks.png">
-                        <!-- The image slot renders after the image loads. -->
-                        <img src="./assets/images/brooks.png">
-                        <!-- The placeholder slot displays while the image is loading. -->
-                        <div slot="placeholder">
-                            <!-- You can put any component you want in here. -->
-                            Loading....
-                        </div>
-                    </clazy-load>
+                    <g-image src="~/assets/images/brooks.png"/>
                     <p class="mt-4 text-2xl">Brooks Pet Sitters</p>
                     <p class="text-gray-600">
                         I helped my wife start her own business, and created her website with functional design and SEO
@@ -73,15 +74,7 @@
                     </p>
                 </div>
                 <div class="md:w-1/4 mr-12 mb-6 px-6">
-                    <clazy-load src="./assets/images/logo-new-black.jpg">
-                        <!-- The image slot renders after the image loads. -->
-                        <img src="./assets/images/logo-new-black.jpg">
-                        <!-- The placeholder slot displays while the image is loading. -->
-                        <div slot="placeholder">
-                            <!-- You can put any component you want in here. -->
-                            Loading....
-                        </div>
-                    </clazy-load>
+                    <g-image src="~/assets/images/logo-new-black.jpg"/>
                     <p class="mt-4 text-2xl">My Haulfryn</p>
                     <p class="text-gray-600">
                         Built entirely with Laravel, this website enabled holiday and residential homeowners the ability
@@ -92,15 +85,7 @@
                     </p>
                 </div>
                 <div class="md:w-1/4 px-6">
-                    <clazy-load src="./assets/images/pulse8communications.jpg">
-                        <!-- The image slot renders after the image loads. -->
-                        <img src="./assets/images/pulse8communications.jpg">
-                        <!-- The placeholder slot displays while the image is loading. -->
-                        <div slot="placeholder">
-                            <!-- You can put any component you want in here. -->
-                            Loading....
-                        </div>
-                    </clazy-load>
+                    <g-image src="~/assets/images/pulse8communications.jpg"/>
                     <p class="mt-4 text-2xl">Pulse8 Communications</p>
                     <p class="text-gray-600">
                         Customers can view broadband plans and sign up to their chosen plan. Pulse8 Broadband can then
@@ -113,15 +98,7 @@
         <div class="md:flex md:py-32 w-full m-auto bg-black">
             <div class="md:w-1/5"></div>
             <div class="w-full md:w-1/3">
-                <clazy-load src="https://michaelbrooks.dev/wp-content/uploads/2019/03/img1.jpg">
-                    <!-- The image slot renders after the image loads. -->
-                    <img src="https://michaelbrooks.dev/wp-content/uploads/2019/03/img1.jpg">
-                    <!-- The placeholder slot displays while the image is loading. -->
-                    <div slot="placeholder">
-                        <!-- You can put any component you want in here. -->
-                        Loading....
-                    </div>
-                </clazy-load>
+                <img src="https://michaelbrooks.dev/wp-content/uploads/2019/03/img1.jpg">
             </div>
             <div class="w-full mt-6 md:w-1/4 text-center md:text-left">
                 <p class="text-white text-5xl">About Me</p>
@@ -145,22 +122,22 @@
                 <p class="text-white mt-8 px-6 md:px-0">
                     <a href="#" class="underline" v-scroll-to="'#contact'">Contact me today!</a>
                 </p>
-                <div class="mt-8 px-6 md:px-0">
+                <div class="mt-8 px-6 md:px-0 text-white">
                     <div class="elementor-social-icons-wrapper">
                         <a href="https://blog.michaelbrooks.dev">
-                            <i class="fas fa-blog text-white text-5xl"></i>
+                            <font-awesome :icon="['fa','blog']" class="text-white text-5xl"/>
                         </a>
                         <a href="https://www.fb.me/michaelbrooksdevelopments/" target="_blank">
-                            <i class="ml-5 fab fa-facebook text-white text-5xl"></i>
+                            <font-awesome :icon="['fab','facebook']" class="text-white text-5xl ml-5" size="3x"/>
                         </a>
-                        <a href="https://twitter.com/mike_d_brooks" target="_blank">
-                            <i class="ml-5 fab fa-twitter text-white text-5xl"></i>
+                        <a href="https://twitter.com/mbrooksuk" target="_blank">
+                            <font-awesome :icon="['fab','twitter']" class="text-white text-5xl ml-5" size="3x"/>
                         </a>
                         <a href="https://www.linkedin.com/company/michael-brooks-developments" target="_blank">
-                            <i class="ml-5 fab fa-linkedin text-white text-5xl"></i>
+                            <font-awesome :icon="['fab','linkedin']" class="text-white text-5xl ml-5" size="3x"/>
                         </a>
                         <a href="https://github.com/Michael-Brooks" target="_blank">
-                            <i class="ml-5 fab fa-github text-white text-5xl"></i>
+                            <font-awesome :icon="['fab','github']" class="text-white text-5xl ml-5" size="3x"/>
                         </a>
                     </div>
                 </div>
@@ -178,18 +155,18 @@
             return {
                 windowWidth: 0,
                 mdBreakpoint: 768,
-                isHidden: true,
+                isHidden: false,
             }
         },
         computed: {
             menuVisible() {
-                return this.windowWidth > this.mdBreakpoint ? true : this.isHidden
-
+                this.isHidden = this.windowWidth > this.mdBreakpoint ? false : true
             }
         },
         methods: {
             updateWindowSize() {
                 this.windowWidth = window.innerWidth
+                this.menuVisible
             },
             clickMenu() {
                 this.isHidden = !this.isHidden
