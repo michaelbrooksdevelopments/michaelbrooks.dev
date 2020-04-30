@@ -128,16 +128,16 @@
                             <font-awesome :icon="['fa','blog']" class="text-white text-5xl"/>
                         </a>
                         <a href="https://www.fb.me/michaelbrooksdevelopments/" target="_blank">
-                            <font-awesome :icon="['fab','facebook']" class="text-white text-5xl ml-5"/>
+                            <font-awesome :icon="['fab','facebook']" class="text-white text-5xl ml-5" size="3x"/>
                         </a>
                         <a href="https://twitter.com/mbrooksuk" target="_blank">
-                            <font-awesome :icon="['fab','twitter']" class="text-white text-5xl ml-5"/>
+                            <font-awesome :icon="['fab','twitter']" class="text-white text-5xl ml-5" size="3x"/>
                         </a>
                         <a href="https://www.linkedin.com/company/michael-brooks-developments" target="_blank">
-                            <font-awesome :icon="['fab','linkedin']" class="text-white text-5xl ml-5"/>
+                            <font-awesome :icon="['fab','linkedin']" class="text-white text-5xl ml-5" size="3x"/>
                         </a>
                         <a href="https://github.com/Michael-Brooks" target="_blank">
-                            <font-awesome :icon="['fab','github']" class="text-white text-5xl ml-5"/>
+                            <font-awesome :icon="['fab','github']" class="text-white text-5xl ml-5" size="3x"/>
                         </a>
                     </div>
                 </div>
