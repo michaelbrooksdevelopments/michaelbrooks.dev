@@ -125,7 +125,7 @@
                 <div class="mt-8 px-6 md:px-0 text-white">
                     <div class="elementor-social-icons-wrapper">
                         <a href="https://blog.michaelbrooks.dev" title="Blog">
-                            <font-awesome :icon="['fa','blog']" class="text-white text-5xl"/>
+                            <font-awesome :icon="['fa','blog']" class="text-white text-5xl" size="3x" fixed-width/>
                         </a>
                         <a href="https://www.fb.me/michaelbrooksdevelopments/" title="Facebook">
                             <font-awesome :icon="['fab','facebook']" class="text-white ml-5" size="3x" fixed-width />

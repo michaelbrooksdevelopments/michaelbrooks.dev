@@ -1,0 +1,5 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+	cache-control = '''
+	max-age=5184000'''
