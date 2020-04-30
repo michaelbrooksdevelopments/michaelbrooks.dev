@@ -16,6 +16,7 @@ module.exports = {
         'g-image--lazy',
         'g-image--loaded',
         'svg-inline--fa',
+        'fa-3x',
     ],
     whitelistPatterns: [/shiki/, /fa-$/],
     extractors: [
