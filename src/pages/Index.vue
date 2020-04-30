@@ -124,20 +124,20 @@
                 </p>
                 <div class="mt-8 px-6 md:px-0 text-white">
                     <div class="elementor-social-icons-wrapper">
-                        <a href="https://blog.michaelbrooks.dev">
+                        <a href="https://blog.michaelbrooks.dev" title="Blog">
                             <font-awesome :icon="['fa','blog']" class="text-white text-5xl"/>
                         </a>
-                        <a href="https://www.fb.me/michaelbrooksdevelopments/" target="_blank">
-                            <font-awesome :icon="['fab','facebook']" class="text-white text-5xl ml-5" size="3x"/>
+                        <a href="https://www.fb.me/michaelbrooksdevelopments/" title="Facebook">
+                            <font-awesome :icon="['fab','facebook']" class="text-white ml-5" size="3x" fixed-width />
                         </a>
-                        <a href="https://twitter.com/mbrooksuk" target="_blank">
-                            <font-awesome :icon="['fab','twitter']" class="text-white text-5xl ml-5" size="3x"/>
+                        <a href="https://twitter.com/mbrooksuk" title="Twitter">
+                            <font-awesome :icon="['fab','twitter']" class="text-white ml-5" size="3x" fixed-width />
                         </a>
-                        <a href="https://www.linkedin.com/company/michael-brooks-developments" target="_blank">
-                            <font-awesome :icon="['fab','linkedin']" class="text-white text-5xl ml-5" size="3x"/>
+                        <a href="https://www.linkedin.com/company/michael-brooks-developments" title="LinkedIn">
+                            <font-awesome :icon="['fab','linkedin']" class="text-white ml-5" size="3x" fixed-width />
                         </a>
-                        <a href="https://github.com/Michael-Brooks" target="_blank">
-                            <font-awesome :icon="['fab','github']" class="text-white text-5xl ml-5" size="3x"/>
+                        <a href="https://github.com/Michael-Brooks" title="GitHub">
+                            <font-awesome :icon="['fab','github']" class="text-white ml-5 mt-5 md:mt-0" size="3x" fixed-width/>
                         </a>
                     </div>
                 </div>
