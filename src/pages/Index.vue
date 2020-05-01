@@ -17,23 +17,23 @@
                     </svg>
                 </button>
             </div>
-            <transition name="fade">
+            <transition name="slide">
                 <div v-if="!isHidden" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
                     <div class="text-sm lg:flex-grow text-right">
                         <a v-on:click="clickMenu" href="#" v-scroll-to="'#contact'"
-                           class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">
+                           class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-400 mr-4">
                             Work
                         </a>
                         <a v-on:click="clickMenu" href="#" v-scroll-to="'#contact'"
-                           class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">
+                           class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-400 mr-4">
                             About
                         </a>
                         <a v-on:click="clickMenu" href="#" v-scroll-to="'#contact'"
-                           class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">
+                           class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-400 mr-4">
                             Testimonials
                         </a>
                         <a v-on:click="clickMenu" href="#" v-scroll-to="'#contact'"
-                           class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4 lg:mr-0">
+                           class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-400 mr-4 lg:mr-0">
                             Contact
                         </a>
                     </div>
@@ -42,16 +42,16 @@
         </nav>
 
         <div id="home" class="md:flex text-center">
-            <div class="py-64 px-65 w-full m-auto background-overlay">
+            <div class="py-32 lg:py-64 px-65 w-full m-auto background-overlay">
                 <p class="text-white text-l uppercase mt-5">Good Afternoon, I am</p>
-                <h1 class="text-white text-5xl">Michael Brooks Developments LTD</h1>
-                <p class="text-white text-3xl">Creating functional websites that work for you</p>
+                <h1 class="text-white text-5xl">Michael Brooks Developments</h1>
+                <p class="text-white text-3xl mt-10">Creating functional websites that work for you</p>
 
                 <span class="divider px-6 py-6 mb-20"></span>
 
                 <div class="w-full mt-24">
                     <a href="#" v-scroll-to="'#contact'"
-                       class="bg-green-500 hover:bg-green-700 text-white font-bold py-4 px-4 uppercase">
+                       class="bg-teal-400 hover:bg-teal-600 text-black hover:text-white font-bold py-4 px-4 uppercase">
                         Have a project in mind? Let's talk
                     </a>
                 </div>
