@@ -85,10 +85,12 @@
 }
 
 .fade-enter, .fade-enter-active /* .fade-leave-active below version 2.1.8 */ {
+    overflow: hidden;
     animation-name: grow;
     animation-duration: .5s;
 }
 .fade-leave-to, .fade-leave-active {
+    overflow: hidden;
     animation-name: shrink;
     animation-duration: .5s;
 }

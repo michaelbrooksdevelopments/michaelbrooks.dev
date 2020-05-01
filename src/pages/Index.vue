@@ -4,12 +4,12 @@
             <div class="flex items-center flex-shrink-0 text-white mr-6">
                 <g-image class="fill-current h-8 w-8 mr-2" width="54" height="54"
                          src="~/assets/images/robot_small.png"/>
-                <a href="#" v-scroll-to="'#home'">
+                <a href="#" v-scroll-to="'#home'" v-on:click="clickMenu">
                     <span class="font-semibold text-xl text-black tracking-tight">Michael Brooks Developments</span>
                 </a>
             </div>
             <div class="block lg:hidden">
-                <button v-on:click="isHidden = !isHidden"
+                <button v-on:click="clickMenu"
                         class="flex items-center px-3 py-2 border rounded text-black border-teal-400 hover:text-black hover:border-white">
                     <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>
                         Menu</title>
@@ -20,19 +20,19 @@
             <transition name="fade">
                 <div v-if="!isHidden" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
                     <div class="text-sm lg:flex-grow text-right">
-                        <a href="#" v-scroll-to="'#contact'"
+                        <a v-on:click="clickMenu" href="#" v-scroll-to="'#contact'"
                            class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">
                             Work
                         </a>
-                        <a href="#" v-scroll-to="'#contact'"
-                           class="block mt-4 lg:inline-block lg:mt-0 test-black hover:text-white mr-4">
+                        <a v-on:click="clickMenu" href="#" v-scroll-to="'#contact'"
+                           class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">
                             About
                         </a>
-                        <a href="#" v-scroll-to="'#contact'"
-                           class="block mt-4 lg:inline-block lg:mt-0 test-black hover:text-white mr-4">
+                        <a v-on:click="clickMenu" href="#" v-scroll-to="'#contact'"
+                           class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4">
                             Testimonials
                         </a>
-                        <a href="#" v-scroll-to="'#contact'"
+                        <a v-on:click="clickMenu" href="#" v-scroll-to="'#contact'"
                            class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4 lg:mr-0">
                             Contact
                         </a>
@@ -171,7 +171,9 @@
                 this.menuVisible
             },
             clickMenu() {
-                this.isHidden = !this.isHidden
+                if (this.windowWidth < this.mdBreakpoint) {
+                    this.isHidden = !this.isHidden
+                }
             }
         },
         mounted() {
