@@ -172,12 +172,14 @@
                 this.menuVisible
             },
             clickMenu(close) {
-                if (close === true) {
+                if (this.windowWidth < this.mdBreakpoint && close === true) {
                     this.isHidden = true
                 }
 
                 if (this.windowWidth < this.mdBreakpoint && close === false) {
                     this.isHidden = !this.isHidden
+                } else {
+
                 }
             }
         },
