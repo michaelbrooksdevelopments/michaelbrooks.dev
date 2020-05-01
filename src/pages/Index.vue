@@ -20,19 +20,19 @@
             <transition name="slide">
                 <div v-if="!isHidden" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
                     <div class="text-sm lg:flex-grow text-right">
-                        <a v-on:click="clickMenu(false)" href="#" v-scroll-to="'#contact'"
+                        <a href="#" v-scroll-to="'#work'" v-on:click="clickMenu(false)"
                            class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-400 mr-4">
                             Work
                         </a>
-                        <a v-on:click="clickMenu(false)" href="#" v-scroll-to="'#contact'"
+                        <a href="#" v-scroll-to="'#contact'" v-on:click="clickMenu(false)"
                            class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-400 mr-4">
                             About
                         </a>
-                        <a v-on:click="clickMenu(false)" href="#" v-scroll-to="'#contact'"
+                        <a href="#" v-scroll-to="'#contact'" v-on:click="clickMenu(false)"
                            class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-400 mr-4">
                             Testimonials
                         </a>
-                        <a v-on:click="clickMenu(false)" href="#" v-scroll-to="'#contact'"
+                        <a href="#" v-scroll-to="'#contact'" v-on:click="clickMenu(false)"
                            class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-400 mr-4 lg:mr-0">
                             Contact
                         </a>
@@ -57,7 +57,7 @@
                 </div>
             </div>
         </div>
-        <div class="md:flex mt-16 text-center ">
+        <div class="md:flex mt-16 text-center" id="work">
             <div class="pt-20 pb-1 m-auto inline">
                 <p class="text-l uppercase mt-5 mb-4">Take a look at my clients</p>
             </div>
