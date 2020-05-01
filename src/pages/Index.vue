@@ -43,7 +43,7 @@
 
         <div id="home" class="md:flex text-center">
             <div class="py-32 lg:py-64 px-65 w-full m-auto background-overlay">
-                <p class="text-white text-l uppercase mt-5">Good Afternoon, I am</p>
+                <p class="text-white text-l uppercase mt-5">{{ greeting }}, I am</p>
                 <h1 class="text-white text-5xl">Michael Brooks Developments</h1>
                 <p class="text-white text-3xl mt-10">Creating functional websites that work for you</p>
 
@@ -158,6 +158,7 @@
                 windowWidth: 0,
                 mdBreakpoint: 768,
                 isHidden: false,
+                greeting: 'Welcome'
             }
         },
         computed: {
@@ -177,6 +178,16 @@
             }
         },
         mounted() {
+            let today = new Date()
+            let curHr = today.getHours()
+
+            if (curHr < 12) {
+                this.greeting = 'Good Morning'
+            } else if (curHr < 17) {
+                this.greeting = 'Good Afternoon'
+            } else {
+                this.greeting = 'Good Evening'
+            }
             this.updateWindowSize()
             window.addEventListener('resize', this.updateWindowSize)
         },
