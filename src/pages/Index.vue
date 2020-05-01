@@ -20,19 +20,19 @@
             <transition name="slide">
                 <div v-if="!isHidden" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
                     <div class="text-sm lg:flex-grow text-right">
-                        <a href="#" v-scroll-to="'#work'" v-on:click="clickMenu(false)"
+                        <a href="#work" v-scroll-to="'#work'" v-on:click="clickMenu(false)"
                            class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-400 mr-4">
                             Work
                         </a>
-                        <a href="#" v-scroll-to="'#contact'" v-on:click="clickMenu(false)"
+                        <a href="#about" v-scroll-to="'#about'" v-on:click="clickMenu(false)"
                            class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-400 mr-4">
                             About
                         </a>
-                        <a href="#" v-scroll-to="'#contact'" v-on:click="clickMenu(false)"
+                        <a href="#testimonials" v-scroll-to="'#testimonials'" v-on:click="clickMenu(false)"
                            class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-400 mr-4">
                             Testimonials
                         </a>
-                        <a href="#" v-scroll-to="'#contact'" v-on:click="clickMenu(false)"
+                        <a href="#contact" v-scroll-to="'#contact'" v-on:click="clickMenu(false)"
                            class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-400 mr-4 lg:mr-0">
                             Contact
                         </a>
@@ -97,7 +97,7 @@
                 </div>
             </div>
         </div>
-        <div class="md:flex md:py-32 w-full m-auto bg-black">
+        <div class="md:flex md:py-32 w-full m-auto bg-black" id="about">
             <div class="md:w-1/5"></div>
             <div class="w-full md:w-1/3">
                 <g-image src="~/assets/images/books.jpg"/>
@@ -144,6 +144,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="testimonials">
+
         </div>
         <div id="contact">
 
