@@ -20,19 +20,19 @@
             <transition name="slide">
                 <div v-if="!isHidden" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
                     <div class="text-sm lg:flex-grow text-right">
-                        <a v-scroll-to="'#contact'" v-on:click="clickMenu" href="#"
+                        <a v-on:click="clickMenu(false)" href="#" v-scroll-to="'#contact'"
                            class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-400 mr-4">
                             Work
                         </a>
-                        <a v-scroll-to="'#contact'" v-on:click="clickMenu" href="#"
+                        <a v-on:click="clickMenu(false)" href="#" v-scroll-to="'#contact'"
                            class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-400 mr-4">
                             About
                         </a>
-                        <a v-on:click="clickMenu" href="#" v-scroll-to="'#contact'"
+                        <a v-on:click="clickMenu(false)" href="#" v-scroll-to="'#contact'"
                            class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-400 mr-4">
                             Testimonials
                         </a>
-                        <a v-scroll-to="'#contact'" v-on:click="clickMenu" href="#"
+                        <a v-on:click="clickMenu(false)" href="#" v-scroll-to="'#contact'"
                            class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-400 mr-4 lg:mr-0">
                             Contact
                         </a>
