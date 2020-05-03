@@ -41,7 +41,7 @@
             </transition>
         </nav>
 
-        <div id="home" class="md:flex text-center">
+        <div id="home" :class="webp" class="md:flex text-center">
             <div class="py-32 lg:py-64 px-65 w-full m-auto background-overlay">
                 <p class="text-white text-l uppercase mt-5">{{ greeting }}, I am</p>
                 <h1 class="text-white text-5xl">Michael Brooks Developments</h1>
@@ -166,7 +166,8 @@
                 windowWidth: 0,
                 mdBreakpoint: 1023,
                 isHidden: false,
-                greeting: 'Welcome'
+                greeting: 'Welcome',
+                webp: 'webp',
             }
         },
         computed: {
@@ -194,6 +195,14 @@
         mounted() {
             let today = new Date()
             let curHr = today.getHours()
+
+            const ua = navigator.userAgent.toLowerCase()
+            console.log(ua);
+            if (ua.indexOf('safari') != -1) {
+                if (ua.indexOf('chrome') < -1) {
+                    this.webp = 'no-webp';
+                }
+            }
 
             if (curHr < 12) {
                 this.greeting = 'Good Morning'

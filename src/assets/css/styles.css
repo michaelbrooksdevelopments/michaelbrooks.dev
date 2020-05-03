@@ -4,13 +4,20 @@
 
 #home {
     background-color: #424242;
-    background-image: url('../images/ash-edmonds-488225-unsplash.webp');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     animation-name: fade-in;
     animation-duration: .5s;
+}
+
+#home.webp {
+    background-image: url('../images/ash-edmonds-488225-unsplash.webp');
+}
+
+#home.no-webp {
+    background-image: url('../images/ash-edmonds-488225-unsplash.jpg');
 }
 
 .background-overlay {
