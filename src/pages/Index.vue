@@ -197,11 +197,8 @@
             let curHr = today.getHours()
 
             const ua = navigator.userAgent.toLowerCase()
-            console.log(ua);
-            if (ua.indexOf('safari') != -1) {
-                if (ua.indexOf('chrome') < -1) {
-                    this.webp = 'no-webp';
-                }
+            if (ua.indexOf('safari') !== -1) {
+                this.webp = 'no-webp';
             }
 
             if (curHr < 12) {
