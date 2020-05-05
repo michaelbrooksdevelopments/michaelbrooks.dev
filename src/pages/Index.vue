@@ -258,7 +258,7 @@
                             Name
                         </label>
                         <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                               id="name" type="text" placeholder="I'm Batman" v-model="formData.name">
+                               id="name" type="text" name="name" placeholder="I'm Batman" v-model="formData.name">
                         <p class="text-red-500 text-xs italic">Please enter your name.</p>
                     </div>
                     <div class="mb-4">
@@ -266,7 +266,7 @@
                             Email
                         </label>
                         <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                               id="email" type="email" placeholder="batman@batcave.com" v-model="formData.email">
+                               id="email" type="email" name="email" placeholder="batman@batcave.com" v-model="formData.email">
                         <p class="text-red-500 text-xs italic">Please enter your email.</p>
                     </div>
                     <div class="mb-6">
@@ -282,8 +282,7 @@
                                 type="submit">
                             Send Email
                             <font-awesome :icon="['far','arrow-alt-circle-right']" class="text-white ml-2 text-xl"
-                                          size="3x"
-                                          fixed-width/>
+                                          size="2x" fixed-width/>
                         </button>
                     </div>
                 </form>
