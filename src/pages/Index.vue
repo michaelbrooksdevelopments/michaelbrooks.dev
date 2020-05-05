@@ -11,14 +11,15 @@
             <div class="block lg:hidden">
                 <button v-on:click="clickMenu(false)"
                         class="flex items-center px-3 py-2 border rounded text-black border-teal-400 hover:text-black hover:border-white">
-                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>
-                        Menu</title>
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
                         <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
                     </svg>
                 </button>
             </div>
             <transition name="slide">
-                <div v-if="!isHidden" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto" v-on:click="clickMenu(false)">
+                <div v-if="!isHidden" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto"
+                     v-on:click="clickMenu(false)">
                     <div class="text-sm lg:flex-grow text-right">
                         <a href="#work" v-scroll-to="'#work'"
                            class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-400 mr-4">
@@ -180,13 +181,15 @@
                 </div>
                 <span class="divider border-white px-6"></span>
                 <ClientOnly>
-                    <Carousel :paginationActiveColor="'#aaa'" :paginationColor="'#fff'" :perPage="1" class="text-white p-12">
+                    <Carousel :paginationActiveColor="'#aaa'" :paginationColor="'#fff'" :perPage="1"
+                              class="text-white p-12">
                         <Slide>
                             <div class="text-center">
                                 <div class="text-xl">
                                     <div class="">
                                         I was looking for someone to build a simple and professional website. Michael
-                                        achieved this and got me on the front-page of most search engines including Google.
+                                        achieved this and got me on the front-page of most search engines including
+                                        Google.
                                         This has led to a huge number of leads who would have never found me.
                                     </div>
                                 </div>
@@ -210,8 +213,10 @@
                             <div class="text-center">
                                 <div class="elementor-testimonial__content">
                                     <div class="text-xl">
-                                        I needed Michael to do some back-end tech tweaks to my website and I couldn't have
-                                        asked for better service. He was quick to respond, knew his stuff and explained any
+                                        I needed Michael to do some back-end tech tweaks to my website and I couldn't
+                                        have
+                                        asked for better service. He was quick to respond, knew his stuff and explained
+                                        any
                                         issues in laymen's terms for reasonable costs. Have used him before and will
                                         definitely use him again. Thank you Michael!
                                     </div>
@@ -235,8 +240,8 @@
             </div>
             <div class="w-full md:w-1/2 md:text-left" id="projects">
                 <div id="projects-overlay" class="md:py-64">
-                        <p class="text-white text-6xl font-bold text-center mt-12">11</p>
-                        <p class="text-gray-500 px-2 text-center text-2xl pb-40">Completed projects</p>
+                    <p class="text-white text-6xl font-bold text-center mt-12">11</p>
+                    <p class="text-gray-500 px-2 text-center text-2xl pb-40">Completed projects</p>
                 </div>
             </div>
         </div>
@@ -247,27 +252,33 @@
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
                             Name
                         </label>
-                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="I'm Batman">
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                               id="name" type="text" placeholder="I'm Batman">
                         <p class="text-red-500 text-xs italic">Please enter your name.</p>
                     </div>
                     <div class="mb-4">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
                             Email
                         </label>
-                        <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="batman@batcave.com">
+                        <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                               id="email" type="email" placeholder="batman@batcave.com">
                         <p class="text-red-500 text-xs italic">Please enter your email.</p>
                     </div>
                     <div class="mb-6">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
                             Message
                         </label>
-                        <textarea name="message" id="message" placeholder="Dear Alfred," cols="30" rows="10" class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                        <textarea name="message" id="message" placeholder="Dear Alfred," cols="30" rows="10"
+                                  class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                         <p class="text-red-500 text-xs italic">Please enter your message.</p>
                     </div>
                     <div class="items-center text-center w-full">
-                        <button class="bg-teal-400 hover:bg-teal-600 text-white font-bold py-4 px-4 rounded focus:outline-none focus:shadow-outline w-full" type="button">
-                            Send Email <font-awesome :icon="['far','arrow-alt-circle-right']" class="text-white ml-2 text-xl" size="3x"
-                                                     fixed-width/>
+                        <button class="bg-teal-400 hover:bg-teal-600 text-white font-bold py-4 px-4 rounded focus:outline-none focus:shadow-outline w-full"
+                                type="button">
+                            Send Email
+                            <font-awesome :icon="['far','arrow-alt-circle-right']" class="text-white ml-2 text-xl"
+                                          size="3x"
+                                          fixed-width/>
                         </button>
                     </div>
                 </form>
@@ -278,6 +289,10 @@
 
 <script>
     export default {
+        metaInfo: {
+            title: 'Michael Brooks Developments | Newton Abbot Web Developer',
+            description: 'Michael Brooks is a Web Developer in Newton Abbot. Creating lightning fast, functional websites.'
+        },
         data() {
             return {
                 windowWidth: 0,
