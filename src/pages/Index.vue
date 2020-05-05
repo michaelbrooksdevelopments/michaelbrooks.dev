@@ -279,7 +279,7 @@
                     </div>
                     <div class="items-center text-center w-full">
                         <button class="bg-teal-400 hover:bg-teal-600 text-white font-bold py-4 px-4 rounded focus:outline-none focus:shadow-outline w-full"
-                                type="button">
+                                type="submit">
                             Send Email
                             <font-awesome :icon="['far','arrow-alt-circle-right']" class="text-white ml-2 text-xl"
                                           size="3x"
