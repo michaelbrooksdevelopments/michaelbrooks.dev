@@ -8,7 +8,6 @@ import { config, library } from '@fortawesome/fontawesome-svg-core'
 import { faBlog } from '@fortawesome/free-solid-svg-icons'
 import {faArrowAltCircleRight} from '@fortawesome/free-regular-svg-icons'
 import { faFacebook, faLinkedin, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons'
-import VueMatomo from 'vue-matomo'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import DefaultLayout from '~/layouts/Default.vue'
 
@@ -29,17 +28,6 @@ export default function (Vue, { router, head, isClient }) {
     x: false,
     y: true
   })
-
-  /*Vue.use(VueMatomo, {
-    host: "https://analytics.michaelbrooks.dev",
-    siteId: 2,
-    router: router,
-    enableLinkTracking: true,
-    requireConsent: false,
-    trackInitialView: false,
-    trackerFileName: "piwik",
-    debug: false
-  })*/
 
   Vue.component('font-awesome', FontAwesomeIcon)
 

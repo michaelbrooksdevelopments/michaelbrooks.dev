@@ -175,57 +175,59 @@
                     </div>
                 </div>
                 <span class="divider border-white px-6"></span>
-                <Carousel :paginationActiveColor="'#aaa'" :paginationColor="'#fff'" :perPage="1" class="text-white p-12">
-                    <Slide>
-                        <div class="text-center">
-                            <div class="text-xl">
-                                <div class="">
-                                    I was looking for someone to build a simple and professional website. Michael
-                                    achieved this and got me on the front-page of most search engines including Google.
-                                    This has led to a huge number of leads who would have never found me.
-                                </div>
-                            </div>
-                            <div class="text-center mt-10">
-                                <div class="mb-6">
-                                    <img class="h-16 w-16 rounded-full m-auto"
-                                         src="https://i1.wp.com/michaelbrooks.dev/wp-content/uploads/2019/03/49701137_2298555900377358_2530712069309726720_n-1.jpg?fit=541%2C541&amp;ssl=1"
-                                         alt="Tiffanie Brooks">
-                                </div>
-                                <a href="https://brookspetsitters.com">
-                                    <cite class="text-center">
-                                        <span class="not-italic">Tiffanie Brooks</span>
-                                        <br>
-                                        <span class="">Professional Pet Sitter</span>
-                                    </cite>
-                                </a>
-                            </div>
-                        </div>
-                    </Slide>
-                    <Slide>
-                        <div class="text-center">
-                            <div class="elementor-testimonial__content">
+                <ClientOnly>
+                    <Carousel :paginationActiveColor="'#aaa'" :paginationColor="'#fff'" :perPage="1" class="text-white p-12">
+                        <Slide>
+                            <div class="text-center">
                                 <div class="text-xl">
-                                    I needed Michael to do some back-end tech tweaks to my website and I couldn't have
-                                    asked for better service. He was quick to respond, knew his stuff and explained any
-                                    issues in laymen's terms for reasonable costs. Have used him before and will
-                                    definitely use him again. Thank you Michael!
+                                    <div class="">
+                                        I was looking for someone to build a simple and professional website. Michael
+                                        achieved this and got me on the front-page of most search engines including Google.
+                                        This has led to a huge number of leads who would have never found me.
+                                    </div>
+                                </div>
+                                <div class="text-center mt-10">
+                                    <div class="mb-6">
+                                        <img class="h-16 w-16 rounded-full m-auto"
+                                             src="https://i1.wp.com/michaelbrooks.dev/wp-content/uploads/2019/03/49701137_2298555900377358_2530712069309726720_n-1.jpg?fit=541%2C541&amp;ssl=1"
+                                             alt="Tiffanie Brooks">
+                                    </div>
+                                    <a href="https://brookspetsitters.com">
+                                        <cite class="text-center">
+                                            <span class="not-italic">Tiffanie Brooks</span>
+                                            <br>
+                                            <span class="">Professional Pet Sitter</span>
+                                        </cite>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="text-center mt-10">
-                                <img class="h-16 w-16 rounded-full m-auto mb-6"
-                                     src="https://i2.wp.com/michaelbrooks.dev/wp-content/uploads/2020/04/24300971_10159556644535231_7108843465381153682_n-300x300-1.jpg?fit=300%2C300&amp;ssl=1"
-                                     alt="Toni">
+                        </Slide>
+                        <Slide>
+                            <div class="text-center">
+                                <div class="elementor-testimonial__content">
+                                    <div class="text-xl">
+                                        I needed Michael to do some back-end tech tweaks to my website and I couldn't have
+                                        asked for better service. He was quick to respond, knew his stuff and explained any
+                                        issues in laymen's terms for reasonable costs. Have used him before and will
+                                        definitely use him again. Thank you Michael!
+                                    </div>
+                                </div>
+                                <div class="text-center mt-10">
+                                    <img class="h-16 w-16 rounded-full m-auto mb-6"
+                                         src="https://i2.wp.com/michaelbrooks.dev/wp-content/uploads/2020/04/24300971_10159556644535231_7108843465381153682_n-300x300-1.jpg?fit=300%2C300&amp;ssl=1"
+                                         alt="Toni">
 
-                                <a href="https://reclaimingyourfuture.com/">
-                                    <cite class="elementor-testimonial__cite">
-                                        <span class="font-semibold not-italic">Toni</span><br>
-                                        <span class="italic">Writer</span>
-                                    </cite>
-                                </a>
+                                    <a href="https://reclaimingyourfuture.com/">
+                                        <cite class="elementor-testimonial__cite">
+                                            <span class="font-semibold not-italic">Toni</span><br>
+                                            <span class="italic">Writer</span>
+                                        </cite>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                    </Slide>
-                </Carousel>
+                        </Slide>
+                    </Carousel>
+                </ClientOnly>
             </div>
             <div class="w-full md:w-1/2 md:text-left" id="projects">
                 <div id="projects-overlay" class="md:py-64">
@@ -271,8 +273,6 @@
 </template>
 
 <script>
-    import {Carousel, Slide} from 'vue-carousel'
-
     export default {
         data() {
             return {
@@ -284,8 +284,14 @@
             }
         },
         components: {
-            Carousel,
-            Slide,
+            Carousel: () =>
+                import ('vue-carousel')
+                    .then(m => m.Carousel)
+                    .catch(),
+            Slide: () =>
+                import ('vue-carousel')
+                    .then(m => m.Slide)
+                    .catch()
         },
         computed: {
             menuVisible() {
