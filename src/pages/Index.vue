@@ -262,18 +262,18 @@
                         <p class="text-red-500 text-xs italic">Please enter your name.</p>
                     </div>
                     <div class="mb-4">
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="email" v-model="formData.email">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
                             Email
                         </label>
                         <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                               id="email" type="email" placeholder="batman@batcave.com" v-model="formData.message">
+                               id="email" type="email" placeholder="batman@batcave.com" v-model="formData.email">
                         <p class="text-red-500 text-xs italic">Please enter your email.</p>
                     </div>
                     <div class="mb-6">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
                             Message
                         </label>
-                        <textarea name="message" id="message" placeholder="Dear Alfred," cols="30" rows="10"
+                        <textarea name="message" id="message" placeholder="Dear Alfred," cols="30" rows="10" v-model="formData.message"
                                   class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                         <p class="text-red-500 text-xs italic">Please enter your message.</p>
                     </div>
@@ -310,7 +310,7 @@
                 isHidden: false,
                 greeting: 'Welcome',
                 webp: 'webp',
-                formData() {},
+                formData: {},
             }
         },
         components: {
