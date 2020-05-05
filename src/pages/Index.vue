@@ -247,10 +247,9 @@
         </div>
         <div class="md:flex mt-16 py-16" id="contact">
             <div class="m-auto inline w-1/3">
-                <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" name="contact"
+                <form :class="isFormSuccess.form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" name="contact"
                       method="post"
                       v-on:submit.prevent="handleSubmit"
-                      action="/success/"
                       data-netlify="true"
                       data-netlify-honeypot="bot-field">
                     <div class="mb-4">
@@ -286,6 +285,9 @@
                         </button>
                     </div>
                 </form>
+                <div :class="isFormSuccess.success" class="text-center text-xl px-2">
+                    Your message has been sent successfully, thank you!
+                </div>
             </div>
         </div>
     </div>
@@ -307,6 +309,10 @@
                 windowWidth: 0,
                 mdBreakpoint: 1023,
                 isHidden: false,
+                isFormSuccess: {
+                    form: 'block',
+                    success: 'hidden',
+                },
                 greeting: 'Welcome',
                 webp: 'webp',
                 formData: {},
@@ -357,7 +363,10 @@
                         ...this.formData,
                     }),
                 })
-                    .then(() => this.$router.push('/success'))
+                    .then(() => {
+                        this.isFormSuccess.form = 'hidden'
+                        this.isFormSuccess.success = 'block'
+                    })
                     .catch(error => alert(error))
             }
         },
