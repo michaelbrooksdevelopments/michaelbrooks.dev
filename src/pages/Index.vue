@@ -258,15 +258,15 @@
                             Name
                         </label>
                         <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                               id="name" type="text" placeholder="I'm Batman">
+                               id="name" type="text" placeholder="I'm Batman" v-model="formData.name">
                         <p class="text-red-500 text-xs italic">Please enter your name.</p>
                     </div>
                     <div class="mb-4">
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="email" v-model="formData.email">
                             Email
                         </label>
                         <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                               id="email" type="email" placeholder="batman@batcave.com">
+                               id="email" type="email" placeholder="batman@batcave.com" v-model="formData.message">
                         <p class="text-red-500 text-xs italic">Please enter your email.</p>
                     </div>
                     <div class="mb-6">
