@@ -291,7 +291,12 @@
     export default {
         metaInfo: {
             title: 'Michael Brooks Developments | Newton Abbot Web Developer',
-            description: 'Michael Brooks is a Web Developer in Newton Abbot. Creating lightning fast, functional websites.'
+            meta: [
+                {
+                    name: 'description',
+                    content: 'Michael Brooks is a Web Developer in Newton Abbot. Creating lightning fast, functional websites.'
+                }
+            ]
         },
         data() {
             return {
