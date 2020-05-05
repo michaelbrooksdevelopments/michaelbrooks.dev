@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <nav class="flex w-full items-center fixed justify-between flex-wrap bg-white p-6 border-b">
+        <nav class="flex w-full items-center fixed justify-between flex-wrap bg-white p-6 border-b z-10">
             <div class="flex items-center flex-shrink-0 text-white mr-6">
                 <g-image class="fill-current h-8 w-8 mr-2" width="54" height="54"
                          src="~/assets/images/robot_small.png"/>
@@ -247,7 +247,12 @@
         </div>
         <div class="md:flex mt-16 py-16" id="contact">
             <div class="m-auto inline w-1/3">
-                <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" method="POST" data-netlify="true">
+                <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" name="contact"
+                      method="post"
+                      v-on:submit.prevent="handleSubmit"
+                      action="/success/"
+                      data-netlify="true"
+                      data-netlify-honeypot="bot-field">
                     <div class="mb-4">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
                             Name
@@ -305,6 +310,7 @@
                 isHidden: false,
                 greeting: 'Welcome',
                 webp: 'webp',
+                formData() {},
             }
         },
         components: {
@@ -337,6 +343,23 @@
                 } else {
 
                 }
+            },
+            encode(data) {
+                return Object.keys(data)
+                    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+                    .join('&')
+            },
+            handleSubmit(e) {
+                fetch('/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: this.encode({
+                        'form-name': e.target.getAttribute('name'),
+                        ...this.formData,
+                    }),
+                })
+                    .then(() => this.$router.push('/success'))
+                    .catch(error => alert(error))
             }
         },
         mounted() {
