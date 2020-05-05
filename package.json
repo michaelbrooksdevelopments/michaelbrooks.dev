@@ -10,9 +10,9 @@
     "@fortawesome/free-regular-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "gridsome": "^0.7.0",
+    "gridsome-plugin-matomo": "^0.1.0",
     "tailwindcss": "^1.4.0",
     "vue-carousel": "^0.18.0",
-    "vue-matomo": "^3.13.4-1",
     "vue-scrollto": "^2.18.1"
   },
   "devDependencies": {

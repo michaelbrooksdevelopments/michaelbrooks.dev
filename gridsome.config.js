@@ -9,7 +9,15 @@ if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss(require(
 
 module.exports = {
   siteName: 'Gridsome',
-  plugins: [],
+  plugins: [
+    {
+      use: 'gridsome-plugin-matomo',
+      options: {
+        host: 'https://analytics.michaelbrooks.dev',
+        siteId: 2
+      }
+    }
+  ],
   css: {
     loaderOptions: {
       postcss: {

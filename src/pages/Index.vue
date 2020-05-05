@@ -291,7 +291,7 @@
             Slide: () =>
                 import ('vue-carousel')
                     .then(m => m.Slide)
-                    .catch()
+                    .catch(),
         },
         computed: {
             menuVisible() {
