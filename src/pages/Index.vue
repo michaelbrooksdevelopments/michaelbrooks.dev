@@ -62,14 +62,14 @@
                 </div>
             </div>
         </div>
-        <div class="md:flex mt-16 text-center py-16" id="work">
+        <div class="md:flex mt-16 text-center md:py-16" id="work">
             <div class="m-auto inline">
                 <p class="text-black text-xl mt-5 mb-4">Building great experiences</p>
                 <p class="text-4xl uppercase font-bold">Take a look at my clients</p>
                 <span class="divider border-black px-16 py-6 mb-20"></span>
             </div>
         </div>
-        <div class="md:flex mb-16 text-center pb-32 px-6 md:px-12 mt-4">
+        <div class="md:flex mb-16 text-center md:pb-32 px-6 md:px-12 mt-20">
             <div class="md:flex w-full">
                 <div class="md:w-1/3 w-full mb-6 px-6">
                     <a href="https://brookspetsitters.com">
@@ -108,10 +108,10 @@
         </div>
         <div class="md:flex md:py-32 w-full m-auto bg-black" id="about">
             <div class="w-full md:w-1/2 md:px-4">
-                <g-image src="~/assets/images/about.jpg" class="float-right"/>
+                <g-image src="~/assets/images/about.jpg" class="md:float-right"/>
             </div>
-            <div class="w-full mt-6 md:w-1/2 lg:w-1/3 text-center md:text-left px-4">
-                <p class="text-white text-5xl font-semibold,">About Me</p>
+            <div class="w-full md:w-1/2 lg:w-1/3 text-center md:text-left px-4">
+                <p class="text-white mt-6 text-5xl font-semibold">About Me</p>
                 <span class="divider border-white px-6"></span>
                 <p class="text-white mt-8 px-6 md:px-0 text-lg">
                     I’ve been in the professional trade for over eight years. I’m a master of a select number of
@@ -160,7 +160,7 @@
                 </div>
             </div>
         </div>
-        <div class="md:flex text-center py-16" id="testimonials">
+        <div class="md:flex text-center md:py-16 pb-16" id="testimonials">
             <div class="m-auto inline">
                 <p class="text-black text-xl mt-5 mb-12">Have a project in the works?</p>
                 <a href="#" v-scroll-to="'#contact'"
@@ -169,20 +169,20 @@
                 </a>
             </div>
         </div>
-        <div class="md:flex w-full m-auto bg-black" id="reviews">
+        <div class="md:flex pt-20 md:pt-0 md:mt-10 w-full m-auto bg-black text-center md:text-left" id="reviews">
             <div class="w-full md:w-1/2 md:px-12 md:py-32">
-                <p class="text-white text-5xl font-semibold,">Skills you can trust</p>
-                <div class="m-auto" data-id="7610b09f" data-element_type="widget" data-widget_type="image.default">
+                <p class="text-white text-4xl md:text-5xl font-semibold,">Skills you can trust</p>
+                <div class="m-auto">
                     <div class="elementor-widget-container">
                         <div class="elementor-image">
                             <img src="https://i2.wp.com/michaelbrooks.dev/wp-content/uploads/2019/03/ether-stars-1.png?fit=148%2C24&amp;ssl=1"
-                                 class="m-auto" alt="" width="148" height="24"></div>
+                                 class="m-auto mt-6" alt="" width="148" height="24"></div>
                     </div>
                 </div>
                 <span class="divider border-white px-6"></span>
                 <ClientOnly>
                     <Carousel :paginationActiveColor="'#aaa'" :paginationColor="'#fff'" :perPage="1"
-                              class="text-white p-12">
+                              class="text-white md:p-12 mt-20">
                         <Slide>
                             <div class="text-center">
                                 <div class="text-xl">
@@ -238,14 +238,15 @@
                     </Carousel>
                 </ClientOnly>
             </div>
-            <div class="w-full md:w-1/2 md:text-left" id="projects">
-                <div id="projects-overlay" class="md:py-64">
+            <div class="w-full md:w-1/2 md:text-left mt-10 md:mt-0" id="projects">
+                <div id="projects-overlay" class="md:py-64 py-10">
                     <p class="text-white text-6xl font-bold text-center mt-12">11</p>
-                    <p class="text-gray-500 px-2 text-center text-2xl pb-40">Completed projects</p>
+                    <p class="text-gray-500 px-2 text-center text-2xl pb-10 md:pb-64">Completed projects</p>
+                    <div class="py-3"></div>
                 </div>
             </div>
         </div>
-        <div class="md:flex mt-16 py-16" id="contact">
+        <div class="md:flex mt-16 md:py-16" id="contact">
             <div class="m-auto inline w-1/3">
                 <form :class="isFormSuccess.form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" name="contact"
                       method="post"
@@ -256,28 +257,28 @@
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
                             Name
                         </label>
-                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        <input :class="formData.nameError.border" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                id="name" type="text" name="name" placeholder="I'm Batman" v-model="formData.name">
-                        <p class="text-red-500 text-xs italic">Please enter your name.</p>
+                        <p :class="formData.nameError.text" class="text-red-500 text-xs italic">Please enter your name.</p>
                     </div>
                     <div class="mb-4">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
                             Email
                         </label>
-                        <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                        <input :class="formData.emailError.border" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                id="email" type="email" name="email" placeholder="batman@batcave.com" v-model="formData.email">
-                        <p class="text-red-500 text-xs italic">Please enter your email.</p>
+                        <p :class="formData.emailError.text" class="text-red-500 text-xs italic">Please enter your email.</p>
                     </div>
                     <div class="mb-6">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
                             Message
                         </label>
-                        <textarea name="message" id="message" placeholder="Dear Alfred," cols="30" rows="10" v-model="formData.message"
-                                  class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                        <p class="text-red-500 text-xs italic">Please enter your message.</p>
+                        <textarea :class="formData.messageError.border" name="message" id="message" placeholder="Dear Alfred," cols="30" rows="10" v-model="formData.message"
+                                  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                        <p :class="formData.messageError.text" class="text-red-500 text-xs italic">Please enter your message.</p>
                     </div>
                     <div class="items-center text-center w-full">
-                        <button class="bg-teal-400 hover:bg-teal-600 text-white font-bold py-4 px-4 rounded focus:outline-none focus:shadow-outline w-full"
+                        <button class="bg-teal-400 hover:bg-teal-600 text-white font-bold py-4 px-4 mt-6 rounded focus:outline-none focus:shadow-outline w-full"
                                 type="submit">
                             Send Email
                             <font-awesome :icon="['far','arrow-alt-circle-right']" class="text-white ml-2 text-xl"
@@ -315,7 +316,21 @@
                 },
                 greeting: 'Welcome',
                 webp: 'webp',
-                formData: {},
+                formData: {
+                    nameError: {
+                        border: '',
+                        text: 'hidden',
+                    },
+                    emailError: {
+                        border: '',
+                        text: 'hidden',
+                    },
+                    messageError: {
+                        border: '',
+                        text: 'hidden',
+                    },
+                    errors: null,
+                },
             }
         },
         components: {
@@ -345,8 +360,6 @@
 
                 if (this.windowWidth < this.mdBreakpoint && close === false) {
                     this.isHidden = !this.isHidden
-                } else {
-
                 }
             },
             encode(data) {
@@ -355,19 +368,44 @@
                     .join('&')
             },
             handleSubmit(e) {
-                fetch('/', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: this.encode({
-                        'form-name': e.target.getAttribute('name'),
-                        ...this.formData,
-                    }),
-                })
-                    .then(() => {
-                        this.isFormSuccess.form = 'hidden'
-                        this.isFormSuccess.success = 'block'
-                    })
-                    .catch(error => alert(error))
+                if (!this.formData.name || !this.formData.email || !this.formData.message) {
+                    this.formData.errors = 1
+                } else {
+                    this.formData.errors = null
+                }
+
+                if (!this.formData.name) {
+                    this.formData.nameError.border = 'border-red-500'
+                    this.formData.nameError.text = 'block'
+                }
+
+                if (!this.formData.email) {
+                    this.formData.emailError.border = 'border-red-500'
+                    this.formData.emailError.text = 'block'
+                }
+
+                if (!this.formData.message) {
+                    this.formData.messageError.border = 'border-red-500'
+                    this.formData.messageError.text = 'block'
+                }
+
+                if (this.formData.errors === null) {
+                    {
+                        fetch('/', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                            body: this.encode({
+                                'form-name': e.target.getAttribute('name'),
+                                ...this.formData,
+                            }),
+                        })
+                            .then(() => {
+                                this.isFormSuccess.form = 'hidden'
+                                this.isFormSuccess.success = 'block'
+                            })
+                            .catch(error => alert(error))
+                    }
+                }
             }
         },
         mounted() {
