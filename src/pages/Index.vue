@@ -34,12 +34,12 @@
                             Testimonials
                         </a>
                         <a href="#contact" v-scroll-to="'#contact'"
-                           class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-400 mr-4 lg:mr-0">
+                           class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-400 mr-4">
                             Contact
                         </a>
                         <a href="https://blog.michaelbrooks.dev"
                            class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal-400 mr-4 lg:mr-0">
-                            blog
+                            Blog
                         </a>
                     </div>
                 </div>
@@ -152,7 +152,7 @@
                             <font-awesome :icon="['fab','linkedin']" class="text-white ml-5 text-4xl" size="3x"
                                           fixed-width/>
                         </a>
-                        <a href="https://github.com/Michael-Brooks" title="GitHub">
+                        <a href="https://github.com/michael-brooks-developments" title="GitHub">
                             <font-awesome :icon="['fab','github']" class="text-white ml-5 text-4xl" size="3x"
                                           fixed-width/>
                         </a>
