@@ -17,7 +17,7 @@
 }
 
 #home.no-webp {
-    background-image: url('../images/ash-edmonds-488225-unsplash.jpg');
+    background-color: #000;
 }
 
 .background-overlay {
@@ -33,9 +33,17 @@
 
 #projects {
     transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
-    background-image: url("../images/img2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#projects.webp {
+    background-image: url("../images/img2.webp");
+}
+
+#projects.no-webp {
+    border-top: #fff solid 10px;
+    background-color: #000;
 }
 
 #projects-overlay {

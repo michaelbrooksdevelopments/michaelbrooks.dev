@@ -239,7 +239,7 @@
                     </Carousel>
                 </ClientOnly>
             </div>
-            <div class="w-full md:w-1/2 md:text-left mt-10 md:mt-0" id="projects">
+            <div :class="webp" class="w-full md:w-1/2 md:text-left mt-10 md:mt-0" id="projects">
                 <div id="projects-overlay" class="md:py-64 py-10">
                     <p class="text-white text-6xl font-bold text-center mt-12">11</p>
                     <p class="text-gray-500 px-2 text-center text-2xl pb-10 md:pb-64">Completed projects</p>
