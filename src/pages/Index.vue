@@ -175,8 +175,9 @@
                 <div class="m-auto">
                     <div class="">
                         <div class="">
-                            <img src="https://i2.wp.com/michaelbrooks.dev/wp-content/uploads/2019/03/ether-stars-1.png?fit=148%2C24&amp;ssl=1"
-                                 class="m-auto mt-6" alt="" width="148" height="24"></div>
+                            <g-image src="~/assets/images/ether-stars.png" class="m-auto mt-6" alt="" width="148"
+                                     height="24"/>
+                        </div>
                     </div>
                 </div>
                 <span class="divider border-white px-6"></span>
@@ -195,9 +196,9 @@
                                 </div>
                                 <div class="text-center mt-10">
                                     <div class="mb-6">
-                                        <img class="h-16 w-16 rounded-full m-auto"
-                                             src="https://i1.wp.com/michaelbrooks.dev/wp-content/uploads/2019/03/49701137_2298555900377358_2530712069309726720_n-1.jpg?fit=541%2C541&amp;ssl=1"
-                                             alt="Tiffanie Brooks">
+                                        <g-image class="h-16 w-16 rounded-full m-auto"
+                                             src="~/assets/images/brooks-logo.jpg"
+                                             alt="Tiffanie Brooks" />
                                     </div>
                                     <a href="https://brookspetsitters.com">
                                         <cite class="text-center">
@@ -222,9 +223,9 @@
                                     </div>
                                 </div>
                                 <div class="text-center mt-10">
-                                    <img class="h-16 w-16 rounded-full m-auto mb-6"
-                                         src="https://i2.wp.com/michaelbrooks.dev/wp-content/uploads/2020/04/24300971_10159556644535231_7108843465381153682_n-300x300-1.jpg?fit=300%2C300&amp;ssl=1"
-                                         alt="Toni">
+                                    <g-image class="h-16 w-16 rounded-full m-auto mb-6"
+                                         src="~/assets/images/toni.jpg"
+                                         alt="Toni"/>
 
                                     <a href="https://reclaimingyourfuture.com/">
                                         <cite class="">
@@ -257,25 +258,32 @@
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
                             Name
                         </label>
-                        <input :class="formData.nameError.border" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        <input :class="formData.nameError.border"
+                               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                id="name" type="text" name="name" placeholder="I'm Batman" v-model="formData.name">
-                        <p :class="formData.nameError.text" class="text-red-500 text-xs italic">Please enter your name.</p>
+                        <p :class="formData.nameError.text" class="text-red-500 text-xs italic">Please enter your
+                            name.</p>
                     </div>
                     <div class="mb-4">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
                             Email
                         </label>
-                        <input :class="formData.emailError.border" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                               id="email" type="email" name="email" placeholder="batman@batcave.com" v-model="formData.email">
-                        <p :class="formData.emailError.text" class="text-red-500 text-xs italic">Please enter your email.</p>
+                        <input :class="formData.emailError.border"
+                               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                               id="email" type="email" name="email" placeholder="batman@batcave.com"
+                               v-model="formData.email">
+                        <p :class="formData.emailError.text" class="text-red-500 text-xs italic">Please enter your
+                            email.</p>
                     </div>
                     <div class="mb-6">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
                             Message
                         </label>
-                        <textarea :class="formData.messageError.border" name="message" id="message" placeholder="Dear Alfred," cols="30" rows="10" v-model="formData.message"
+                        <textarea :class="formData.messageError.border" name="message" id="message"
+                                  placeholder="Dear Alfred," cols="30" rows="10" v-model="formData.message"
                                   class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                        <p :class="formData.messageError.text" class="text-red-500 text-xs italic">Please enter your message.</p>
+                        <p :class="formData.messageError.text" class="text-red-500 text-xs italic">Please enter your
+                            message.</p>
                     </div>
                     <div class="items-center text-center w-full">
                         <button class="bg-teal-400 hover:bg-teal-600 text-white font-bold py-4 px-4 mt-6 rounded focus:outline-none focus:shadow-outline w-full"
@@ -393,7 +401,7 @@
                     {
                         fetch('/', {
                             method: 'POST',
-                            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
                             body: this.encode({
                                 'form-name': e.target.getAttribute('name'),
                                 ...this.formData,
