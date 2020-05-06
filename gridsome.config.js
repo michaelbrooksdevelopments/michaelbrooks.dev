@@ -8,7 +8,7 @@ const postcssPlugins = [
 if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss(require('./purgecss.config.js')))
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'Michael Brooks Developments',
   plugins: [
     {
       use: 'gridsome-plugin-matomo',

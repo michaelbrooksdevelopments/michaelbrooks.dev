@@ -422,7 +422,11 @@
 
             const ua = navigator.userAgent.toLowerCase()
             if (ua.indexOf('safari') !== -1) {
-                this.webp = 'no-webp';
+                if (ua.indexOf('chrome') > -1) {
+                    this.webp = 'webp';
+                } else {
+                    this.webp = 'no-webp';
+                }
             }
 
             if (curHr < 12) {
