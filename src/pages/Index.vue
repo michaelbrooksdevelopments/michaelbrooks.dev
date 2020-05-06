@@ -305,7 +305,7 @@
 <script>
     export default {
         metaInfo: {
-            title: 'Michael Brooks Developments | Newton Abbot Web Developer',
+            title: 'Newton Abbot Website Developer',
             meta: [
                 {
                     name: 'description',
