@@ -136,7 +136,7 @@
                     </a>
                 </p>
                 <div class="my-12 py-6 md:px-0 text-white">
-                    <div class="elementor-social-icons-wrapper">
+                    <div class="">
                         <a href="https://blog.michaelbrooks.dev" title="Blog">
                             <font-awesome :icon="['fas','blog']" class="text-white text-4xl" size="3x" fixed-width/>
                         </a>
@@ -173,8 +173,8 @@
             <div class="w-full md:w-1/2 md:px-12 md:py-32">
                 <p class="text-white text-4xl md:text-5xl font-semibold,">Skills you can trust</p>
                 <div class="m-auto">
-                    <div class="elementor-widget-container">
-                        <div class="elementor-image">
+                    <div class="">
+                        <div class="">
                             <img src="https://i2.wp.com/michaelbrooks.dev/wp-content/uploads/2019/03/ether-stars-1.png?fit=148%2C24&amp;ssl=1"
                                  class="m-auto mt-6" alt="" width="148" height="24"></div>
                     </div>
@@ -211,7 +211,7 @@
                         </Slide>
                         <Slide>
                             <div class="text-center">
-                                <div class="elementor-testimonial__content">
+                                <div class="">
                                     <div class="text-xl">
                                         I needed Michael to do some back-end tech tweaks to my website and I couldn't
                                         have
@@ -227,7 +227,7 @@
                                          alt="Toni">
 
                                     <a href="https://reclaimingyourfuture.com/">
-                                        <cite class="elementor-testimonial__cite">
+                                        <cite class="">
                                             <span class="font-semibold not-italic">Toni</span><br>
                                             <span class="italic">Writer</span>
                                         </cite>
