@@ -16,7 +16,26 @@ module.exports = {
         host: 'https://analytics.michaelbrooks.dev',
         siteId: 2
       }
-    }
+    },
+    {
+        use: 'gridsome-plugin-pwa',
+        options: {
+            title: 'Michael Brooks Developments',
+            startUrl: '/',
+            display: 'standalone',
+            statusBarStyle: 'default',
+            manifestPath: 'manifest.json',
+            disableServiceWorker: false,
+            serviceWorkerPath: 'service-worker.js',
+            cachedFileTypes: 'js,json,css,html,png,jpg,jpeg,svg',
+            shortName: 'MB Developments',
+            themeColor: '#4FD1C5',
+            backgroundColor: '#ffffff',
+            icon: 'src/favicon.png',
+            msTileImage: '',
+            msTileColor: '#4FD1C5'
+          }
+      }
   ],
   css: {
     loaderOptions: {
