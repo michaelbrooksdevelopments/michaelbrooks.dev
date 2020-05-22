@@ -3,7 +3,7 @@
         <nav class="flex w-full items-center fixed justify-between flex-wrap bg-white p-6 border-b z-10">
             <div class="flex items-center flex-shrink-0 text-white mr-6">
                 <g-image class="fill-current h-8 w-8 mr-2" width="54" height="54"
-                         src="~/assets/images/robot_small.png"/>
+                         src="~/assets/images/robot_small.png" alt="Michael Brooks Developments Logo - Waving robot" />
                 <a href="#" v-scroll-to="'#home'" v-on:click="clickMenu(true)">
                     <span class="font-semibold text-l md:text-xl text-black tracking-tight">Michael Brooks Developments</span>
                 </a>
@@ -73,7 +73,7 @@
             <div class="md:flex w-full">
                 <div class="md:w-1/3 w-full mb-6 px-6">
                     <a href="https://brookspetsitters.com">
-                        <g-image src="~/assets/images/brooks.png"/>
+                        <g-image src="~/assets/images/brooks.png" alt="Brooks Pet Sitters logo"/>
                         <p class="mt-4 text-2xl">Brooks Pet Sitters</p>
                         <p class="text-gray-600">
                             I helped my wife start her own business, and created her website with functional design and
@@ -84,7 +84,7 @@
                 </div>
                 <div class="md:w-1/3 md:mr-12 mb-6 px-6 mt-16 md:mt-0">
                     <a href="https://myhaulfryn.co.uk">
-                        <g-image src="~/assets/images/logo-new-black.jpg"/>
+                        <g-image src="~/assets/images/logo-new-black.jpg" alt="MyHaulfryn logo"/>
                         <p class="mt-4 text-2xl">My Haulfryn</p>
                         <p class="text-gray-600">
                             Built entirely with Laravel, this website has enabled holiday and residential homeowners the
@@ -95,7 +95,7 @@
                 </div>
                 <div class="md:w-1/3 px-6 mt-16 md:mt-0">
                     <a href="https://pulse8broadband.co.uk">
-                        <g-image src="~/assets/images/pulse8communications.jpg"/>
+                        <g-image src="~/assets/images/pulse8communications.jpg" alt="Pulse8 Communications logo"/>
                         <p class="mt-4 text-2xl">Pulse8 Communications</p>
                         <p class="text-gray-600">
                             Customers can view broadband plans and sign up to their chosen plan. Pulse8 Broadband can
@@ -108,7 +108,7 @@
         </div>
         <div class="md:flex md:py-32 w-full m-auto bg-black" id="about">
             <div class="w-full md:w-1/2 md:px-4">
-                <g-image src="~/assets/images/about.jpg" class="md:float-right"/>
+                <g-image src="~/assets/images/about.jpg" class="md:float-right" alt="Self-portrait of Michael Brooks"/>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/3 text-center md:text-left px-4">
                 <p class="text-white mt-6 text-5xl font-semibold">About Me</p>
@@ -176,7 +176,7 @@
                     <div class="">
                         <div class="">
                             <g-image src="~/assets/images/ether-stars.png" class="m-auto mt-6" alt="" width="148"
-                                     height="24"/>
+                                     height="24" alt="5-star website development quality"/>
                         </div>
                     </div>
                 </div>
@@ -198,7 +198,7 @@
                                     <div class="mb-6">
                                         <g-image class="h-16 w-16 rounded-full m-auto"
                                              src="~/assets/images/brooks-logo.jpg"
-                                             alt="Tiffanie Brooks" />
+                                             alt="Brooks Pet Sitters simple B logo" />
                                     </div>
                                     <a href="https://brookspetsitters.com">
                                         <cite class="text-center">
@@ -225,7 +225,7 @@
                                 <div class="text-center mt-10">
                                     <g-image class="h-16 w-16 rounded-full m-auto mb-6"
                                          src="~/assets/images/toni.jpg"
-                                         alt="Toni"/>
+                                         alt="Self-portrait of Toni"/>
 
                                     <a href="https://reclaimingyourfuture.com/">
                                         <cite class="">
