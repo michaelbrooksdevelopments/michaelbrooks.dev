@@ -42,8 +42,8 @@ module.exports = {
                 shortName: 'MB Developments',
                 themeColor: '#4FD1C5',
                 backgroundColor: '#ffffff',
-                icon: 'src/favicon.png',
-                msTileImage: './favicons/ms-icon-70x70.png',
+                icon: 'src/favicons/favicon.png',
+                msTileImage: '/favicons/ms-icon-70x70.png',
                 msTileColor: '#4FD1C5'
             }
         }
