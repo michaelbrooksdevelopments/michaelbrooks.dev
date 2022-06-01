@@ -12,7 +12,7 @@
     "gridsome": "^0.7.15",
     "gridsome-plugin-matomo": "^0.1.0",
     "gridsome-plugin-pwa": "0.0.17",
-    "sharp": "^0.25.3",
+    "sharp": "^0.30.5",
     "tailwindcss": "^1.4.0",
     "vue-carousel": "^0.18.0",
     "vue-scrollto": "^2.18.1"
